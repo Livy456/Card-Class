@@ -1,0 +1,125 @@
+class Card:
+
+    """ A Card object maintains a `rank` and a `suit`. """
+
+    _rank_to_str = {11: 'Jack', 12: 'Queen', 13: 'King', 14: 'Ace'}
+    _suit_to_str = {'C': 'Clubs', 'H': 'Hearts', 'S': 'Spades', 'D': 'Diamonds'}
+
+    def __init__(self, rank: int, suit: str):
+        """ Initialize a Card object.
+        
+        Parameters
+        ----------
+        rank : int ∈ [2, 14]
+            The rank of this card, with order 2, 3, 4, ..., 10, J, Q, K, A.
+            
+        suit : str ∈ ('C', 'H', 'S', 'D')
+            The suit of this card.
+        """
+        assert 2 <= rank <= 14, 'Valid ranks are [2, 14] for the ranks: [2, 3, 4, 5, 6, 7, 8, 9, 10, J, Q, K, A]'
+        assert suit.upper() in {'C', 'H', 'S', 'D'}, 'Valid suits are [C, H, S, D]'
+        # student code goes here
+        
+        self.rank = rank  # initializes the card class, attribute rank to equal rank
+        
+        self.suit = suit  # initializes the card class, attribute suit to equal suit
+        
+
+    def __repr__(self):
+        """ Return the string representation of this card.
+        
+        The card should be printed as "<rank> of <suit>s" where <rank> is the
+        rank of this card and <suit> is the suit of this card. For example, the
+        desired behavior is:
+        
+        >>> my_card = Card(4, 'D')
+        >>> my_card
+        4 of Diamonds
+
+        >>> Card(13, 'H')
+        King of Hearts
+        
+        >>> print(Card(11, 'C'))
+        Jack of Clubs
+        """
+        # student code goes here
+        suit_dict = {"H":"Hearts", "C":"Clubs", "D":"Diamonds", "S":"Spades"}
+        
+        rank_dict = {2:"2", 3:"3", 4:"4", 5:"5", 6:"6", 7:"7", 8:"8", 9:"9", 10:"10", 11:"Jack", 12:"Queen", 13:"King", 14:"Ace"}
+         
+        rank = rank_dict.get(self.rank)
+        suit = suit_dict.get(self.suit)
+        
+        return  rank + " of " + suit
+        
+        
+    def __lt__(self, other):
+        """ Determine whether the rank of this card is less than the rank of the other. """
+        # student code goes here
+        
+        if self.rank < other:
+        # if statement for if this is true
+            return (True)
+        
+        else:
+        # else statement for if this is false
+            return (False)
+        
+        pass
+
+    def __gt__(self, other):
+        """ Determine whether the rank of this card is greater than the rank of the other. """
+        # student code goes here
+        
+        if self.rank > other:
+        # if statement for if this is true
+            return(True)
+        
+        else:
+        # else statement for if this is false
+
+            return(False)
+        
+        pass
+
+    def __le__(self, other):
+        """ Determine whether the rank of this card is less than or equal to the rank of the other. """
+        # student code goes here
+        
+        if self.rank <= other:
+            return(True)
+        # if statement for if this is true
+        
+        else:
+        # else statement for if this is false
+            return(False)
+        
+        pass
+
+    def __ge__(self, other):
+        """ Determine whether the rank of this card is greater than or equal to the rank of the other. """
+        # student code goes here
+        
+        if self.rank >= other:
+        # if statement for if this is true
+            return(True)
+        
+        else:
+        # else statement for if this is false
+            return(False)
+        
+        pass
+
+    def __eq__(self, other):
+        """ Determine whether the rank of this card is equal to the rank of the other. """
+        # student code goes here
+        
+        if self.rank == other:
+        # if statement for if this is true
+            return(True)
+        
+        else:
+        # else statement for if this is false
+            return(False)
+        
+        pass
