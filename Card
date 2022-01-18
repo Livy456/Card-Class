@@ -57,7 +57,7 @@ class Card:
         """ Determine whether the rank of this card is less than the rank of the other. """
         # student code goes here
         
-        if self.rank < other:
+        if self.rank < other.rank:
         # if statement for if this is true
             return (True)
         
@@ -71,7 +71,7 @@ class Card:
         """ Determine whether the rank of this card is greater than the rank of the other. """
         # student code goes here
         
-        if self.rank > other:
+        if self.rank > other.rank:
         # if statement for if this is true
             return(True)
         
@@ -86,7 +86,7 @@ class Card:
         """ Determine whether the rank of this card is less than or equal to the rank of the other. """
         # student code goes here
         
-        if self.rank <= other:
+        if self.rank <= other.rank:
             return(True)
         # if statement for if this is true
         
@@ -100,7 +100,7 @@ class Card:
         """ Determine whether the rank of this card is greater than or equal to the rank of the other. """
         # student code goes here
         
-        if self.rank >= other:
+        if self.rank >= other.rank:
         # if statement for if this is true
             return(True)
         
@@ -114,7 +114,7 @@ class Card:
         """ Determine whether the rank of this card is equal to the rank of the other. """
         # student code goes here
         
-        if self.rank == other:
+        if self.rank == other.rank:
         # if statement for if this is true
             return(True)
         
@@ -123,3 +123,4 @@ class Card:
             return(False)
         
         pass
+vim: syntax=python
